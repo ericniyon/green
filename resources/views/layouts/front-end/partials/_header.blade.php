@@ -128,15 +128,17 @@
     <div class="navbar-sticky bg-light mobile-head">
         <div class="navbar navbar-expand-md navbar-light">
             <div class="container ">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                    data-target="#navbarCollapse" aria-expanded="false">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <a class="navbar-brand d-none d-sm-block {{ Session::get('direction') === 'rtl' ? 'mr-3' : 'mr-3' }} flex-shrink-0 __min-w-7rem"
                     href="{{ route('home') }}">
                     <img class="__inline-11"
                         src="{{ asset('storage/company') . '/' . $web_config['web_logo']->value }}"
                         onerror="this.src='https://res.cloudinary.com/dxuoorngr/image/upload/v1710758318/image-place-holder_cdnntk.png'"
-                        alt="{{ $web_config['name']->value }}" />
+                        alt="{{ $web_config['name']->value }}" style="height: 4rem !important" />
                 </a>
                 <a class="navbar-brand d-sm-none {{ Session::get('direction') === 'rtl' ? 'mr-2' : 'mr-2' }}"
                     href="{{ route('home') }}">
@@ -566,33 +568,28 @@
                                 <a class="nav-link"
                                     href="{{ route('sellers') }}">{{ \App\CPU\translate('Sellers') }}</a>
                             </li>
-
-                            @php($seller_registration = \App\Model\BusinessSetting::where(['type' => 'seller_registration'])->first()->value)
-                            @if ($seller_registration)
-                                <li class="nav-item">
-                                    <div class="dropdown">
-                                        <button class="btn dropdown-toggle text-white" type="button"
-                                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false"
-                                            style="padding-{{ Session::get('direction') === 'rtl' ? 'right' : 'left' }}: 0">
-                                            {{ \App\CPU\translate('Seller') }} {{ \App\CPU\translate('zone') }}
-                                        </button>
-                                        <div class="dropdown-menu __dropdown-menu-3 __min-w-165px"
-                                            aria-labelledby="dropdownMenuButton"
-                                            style="text-align: {{ Session::get('direction') === 'rtl' ? 'right' : 'left' }};">
-                                            <a class="dropdown-item" href="{{ route('shop.apply') }}">
-                                                {{ \App\CPU\translate('Become a') }}
-                                                {{ \App\CPU\translate('Seller') }}
-                                            </a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="{{ route('seller.auth.login') }}">
-                                                {{ \App\CPU\translate('Seller') }} {{ \App\CPU\translate('login') }}
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                            @endif
                         @endif
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    style="padding-{{ Session::get('direction') === 'rtl' ? 'right' : 'left' }}: 0;color:#E54A4E; font-weight:bold">
+                                    {{ \App\CPU\translate('Seller') }} {{ \App\CPU\translate('zone') }}
+                                </button>
+                                <div class="dropdown-menu __dropdown-menu-3 __min-w-165px"
+                                    aria-labelledby="dropdownMenuButton"
+                                    style="text-align: {{ Session::get('direction') === 'rtl' ? 'right' : 'left' }};">
+                                    <a class="dropdown-item" href="{{ route('shop.apply') }}">
+                                        {{ \App\CPU\translate('Become a') }}
+                                        {{ \App\CPU\translate('Seller') }}
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="{{ route('seller.auth.login') }}">
+                                        {{ \App\CPU\translate('Seller') }} {{ \App\CPU\translate('login') }}
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>

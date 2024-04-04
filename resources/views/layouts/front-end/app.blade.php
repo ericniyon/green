@@ -310,9 +310,10 @@
 
     <script src="{{ asset('assets/front-end/vendor/jquery/dist/jquery-2.2.4.min.js') }}"></script>
 <script src="{{ asset('assets/front-end/js/custom.js') }}"></script>
-<script src="https://6valley.6amtech.com/public/assets/front-end/js/slick.js"></script>
-<script src="https://6valley.6amtech.com/public/assets/front-end/js/sweet_alert.js"></script>
-<script src="https://6valley.6amtech.com/public/assets/back-end/js/toastr.js"></script>
+<script src="{{ asset('assets/front-end/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('/assets/front-end/js/slick.js')}}"></script>
+<script src="{{ asset('/assets/front-end/js/sweet_alert.js')}}"></script>
+<script src="{{ asset('/assets/back-end/js/toastr.js')}}"></script>
     <script>
         function addWishlist(product_id) {
             $.ajaxSetup({

@@ -74,7 +74,7 @@
                             <img class="{{ Session::get('direction') === 'rtl' ? 'rightalign' : '' }}"
                                 src="{{ asset('storage/company/') }}/{{ $web_config['footer_logo']->value }}"
                                 onerror="this.src='https://res.cloudinary.com/dxuoorngr/image/upload/v1710758318/image-place-holder_cdnntk.png'"
-                                alt="{{ $web_config['name']->value }}" />
+                                alt="{{ $web_config['name']->value }}" style="height: 12rem" />
                         </a>
                         @php($ios = \App\CPU\Helpers::get_business_settings('download_app_apple_stroe'))
                         @php($android = \App\CPU\Helpers::get_business_settings('download_app_google_stroe'))
@@ -112,7 +112,7 @@
                         <div class="row">
 
                             <div class="col-md-3 footer-padding-bottom">
-                                <h6 class="text-uppercase mb-4 font-weight-bold footer-heder">
+                                <h6 class="text-uppercase mb-4 font-weight-bold footer-heder text-white">
                                     {{ \App\CPU\translate('special') }}</h6>
                                 <ul class="widget-list __pb-10px">
                                     @php(
@@ -143,7 +143,7 @@
                             </div>
                             <div class="col-md-4 footer-padding-bottom"
                                 style="{{ Session::get('direction') === 'rtl' ? 'padding-right:20px;' : '' }}">
-                                <h6 class="text-uppercase mb-4 font-weight-bold footer-heder">
+                                <h6 class="text-uppercase mb-4 font-weight-bold footer-heder text-white">
                                     {{ \App\CPU\translate('account_&_shipping_info') }}</h6>
                                 @if (auth('customer')->check())
                                     <ul class="widget-list __pb-10px">
@@ -191,7 +191,7 @@
                             </div>
                             <div class="col-md-5 footer-padding-bottom">
                                 <div class="mb-2">
-                                    <h6 class="text-uppercase mb-4 font-weight-bold footer-heder">
+                                    <h6 class="text-uppercase mb-4 font-weight-bold footer-heder text-white">
                                         {{ \App\CPU\translate('NEWS LETTER') }}</h6>
                                     <span>{{ \App\CPU\translate('subscribe to our new channel to get latest updates') }}</span>
                                 </div>
@@ -238,7 +238,7 @@
                                             <a class="widget-list-link"
                                                 href="mailto: {{ \App\CPU\Helpers::get_business_settings('company_email') }}">
                                                 <span><i class="fa fa-envelope m-2"></i>
-                                                    {{ \App\CPU\Helpers::get_business_settings('company_email') }}
+                                                    info@gogreen.rw
                                                 </span>
                                             </a>
                                         </div>
@@ -291,7 +291,8 @@
                     <div class=" mt-3">
                         <p
                             class="{{ Session::get('direction') === 'rtl' ? 'text-right ' : 'text-left' }} __text-16px">
-                            {{ $web_config['copyright_text']->value }}</p>
+                            copy@gogreen.rw
+                        </p>
                     </div>
                     <div
                         class="mt-md-3 mt-0 mb-md-3 {{ Session::get('direction') === 'rtl' ? 'text-right' : 'text-left' }}">
@@ -300,7 +301,7 @@
                             @foreach ($social_media as $item)
                                 <span class="social-media ">
                                     <a class="social-btn text-white sb-light sb-{{ $item->name }} {{ Session::get('direction') === 'rtl' ? 'ml-2' : 'mr-2' }} mb-2"
-                                        target="_blank" href="{{ $item->link }}">
+                                        target="_blank" href="">
                                         <i class="{{ $item->icon }}" aria-hidden="true"></i>
                                     </a>
                                 </span>
