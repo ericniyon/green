@@ -14,20 +14,20 @@
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
     <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="{{ asset('assets/back-end') }}/css/vendor.min.css">
-    <link rel="stylesheet" href="{{ asset('assets/back-end') }}/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ asset('assets/back-end') }}/vendor/icon-set/style.css">
+    <link rel="stylesheet" href="{{ asset('assets/back-end/css/vendor.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/back-end/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/back-end/vendor/icon-set/style.css')}}">
     <!-- CSS Front Template -->
-    <link rel="stylesheet" href="{{ asset('assets/back-end') }}/css/theme.minc619.css?v=1.0">
-    <link rel="stylesheet" href="{{ asset('assets/back-end') }}/css/style.css">
-    <link rel="stylesheet" href="{{ asset('assets/back-end') }}/css/toastr.css">
+    <link rel="stylesheet" href="{{ asset('assets/back-end/css/theme.minc619.css?v=1.0')}}">
+    <link rel="stylesheet" href="{{ asset('assets/back-end/css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/back-end/css/toastr.css')}}">
 </head>
 
 <body>
     <!-- ========== MAIN CONTENT ========== -->
     <main id="content" role="main" class="main">
         <div class="position-fixed top-0 right-0 left-0 bg-img-hero __h-32rem"
-            style="background-image: url({{ asset('assets/admin') }}/svg/components/abstract-bg-4.svg);">
+            style="background-image: url({{ asset('assets/admin/svg/components/abstract-bg-4.svg')}}">
             <!-- SVG Bottom Shape -->
             <figure class="position-absolute right-0 bottom-0 left-0">
                 <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -145,7 +145,7 @@
     <!-- IE Support -->
     <script>
         if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write(
-            '<script src="{{ asset('assets/admin') }}/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+            '<script src="{{ asset('assets/admin/vendor/babel-polyfill/polyfill.min.js')}}"><\/script>');
     </script>
 </body>
 

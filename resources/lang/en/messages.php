@@ -2406,4 +2406,8 @@
   'Product_not_uploaded_yet' => 'Product not uploaded yet',
   'Chat_with_deliveryman' => 'Chat with deliveryman',
   'File type: jpg  jpeg  png. Maximum size: 2MB' => 'File type: jpg  jpeg  png. Maximum size: 2MB',
+  'reset_password' => 'Reset password',
+  'provide_valid_password' => 'Provide valid password',
+  'forget_your_password' => 'Forget your password',
+  'Seller | Reset Password' => 'Seller | Reset Password',
 );

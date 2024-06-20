@@ -3,7 +3,7 @@
 @section('title', \App\CPU\translate('Seller Apply'))
 
 @push('css_or_js')
-    <link href="{{ asset('assets/back-end') }}/css/select2.min.css" rel="stylesheet" />
+    <link href="{{ asset('assets/back-end/css/select2.min.css')}}" rel="stylesheet" />
     <link href="{{ asset('assets/back-end/css/croppie.css') }}" rel="stylesheet">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 @endpush
@@ -85,7 +85,7 @@
                         <div class="col-sm-12">
                             <center>
                                 <img class="__img-125px object-cover" id="viewer"
-                                    src="{{ asset('public\assets\back-end\img\400x400\img2.jpg') }}" alt="banner image" />
+                                    src="{{ asset('assets/back-end/img/400x400/img2.jpg') }}" alt="banner image" />
                             </center>
                             <div class="custom-file mt-3">
                                 <input type="file" name="image" id="customFileUpload" class="custom-file-input"
@@ -149,8 +149,9 @@
                         <div class="col-sm-6">
                             <div class="pb-3">
                                 <center>
+                                    
                                     <img class="__img-125px object-cover" id="viewerLogo"
-                                        src="{{ asset('public\assets\back-end\img\400x400\img2.jpg') }}"
+                                        src="{{ asset('assets/back-end/img/400x400/img2.jpg') }}"
                                         alt="banner image" />
                                 </center>
                             </div>
@@ -168,7 +169,7 @@
                             <div class="pb-3">
                                 <center>
                                     <img class="__img-125px object-cover" id="viewerBanner"
-                                        src="{{ asset('public\assets\back-end\img\400x400\img2.jpg') }}"
+                                        src="{{ asset('assets/back-end/img/400x400/img2.jpg') }}"
                                         alt="banner image" />
                                 </center>
                             </div>
@@ -214,7 +215,7 @@
                                     <strong>
                                         <input type="checkbox" class="mr-1" name="remember" id="inputCheckd">
                                     </strong>
-                                    <span class="mb-4px d-block w-0 flex-grow pl-1">
+                                    <span class="mb-4px d-block  flex-grow pl-1">
                                         <span>{{ \App\CPU\translate('i_agree_to_Your_terms') }}</span>
                                         <a class="font-size-sm" target="_blank" href="{{ route('terms') }}">
                                             {{ \App\CPU\translate('terms_and_condition') }}
